@@ -1,6 +1,6 @@
 ---
 title: "C# Basics"
-date:   2020-05-07 17:06 +0100
+date:   2020-05-07 +0100
 categories: tutorials csharp
 ---
 In this first tutorial about the C# programming language, I hope to explain some of the basics of C#, as well as some basic programming concepts.
@@ -246,7 +246,7 @@ Hello, Dave! 7
 If this doesn't work, you can explicitly cast any other types (like an integer) to a string as
 described above.
 
-### Exercises
+## Exercises
 
 Below are some exercises to try out your newfound knowledge. Each of them has the solution below it,
 but try not to peek unless you get stuck.
