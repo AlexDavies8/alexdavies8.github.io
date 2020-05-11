@@ -23,7 +23,7 @@ email: alexdavies8888@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Re:Coding is a coding blog and tutorial site, focused primarily on C# development.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alexdavies8.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  AlexDavies8
 
 show_excerpts: true
@@ -45,6 +45,11 @@ defaults:
     values:
       #values
       layout: "post"
+
+skin: dark
+
+disqus:
+  shortname: https-alexdavies8-github-io
 
 markdown: CommonMarkGhPages
 commonmark:
