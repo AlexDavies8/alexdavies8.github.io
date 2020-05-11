@@ -2,6 +2,7 @@
 title: "C# Basics"
 date:   2020-05-07 +0100
 categories: tutorials csharp
+order: 1
 ---
 In this first tutorial about the C# programming language, I hope to explain some of the basics of C#, as well as some basic programming concepts.
 

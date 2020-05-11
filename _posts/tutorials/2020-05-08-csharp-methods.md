@@ -2,6 +2,7 @@
 title: "C# Methods"
 date:   2020-05-08 11:50 +0100
 categories: tutorials csharp
+order: 4
 ---
 In C#, a Method is a code block containing a series of statements. This Method can then be 'called',
 to run the code inside that block. Methods can also have 'parameters', and a 'return Type'.
