@@ -17,7 +17,7 @@
     <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
         {% if include.showindex %}
-            {{ forloop.index + 1 }}
+            {{ forloop.index + 1 }}.
         {% endif %}
         {{ post.title | escape }}
         </a>
