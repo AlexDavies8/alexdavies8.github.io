@@ -3,11 +3,18 @@
 </svelte:head>
 
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+  import chevronDown from './assets/chevron-down.svg'
   import heroImage from './assets/hero-image.jpg'
+
   import underminedThumb from './assets/undermined.png'
   import rebeatThumb from './assets/rebeat.png'
+  import dynamoThumb from './assets/dynamo.png'
+  import robowranglerThumb from './assets/robowrangler.png'
+  import micromarketsThumb from './assets/micromarkets.png'
+  import pugPanicThumb from './assets/pugpanic.png'
+  import intertwinedThumb from './assets/intertwined.png'
+  import failingHumanThumb from './assets/failinghuman.png'
+  import moreSacrificesThumb from './assets/moresacrifices.png'
 
   const projects = [
     {
@@ -27,7 +34,7 @@
     },
     {
       name: "ReBeat",
-      description: "10th place for innovation in Ludum Dare 47! Loop the music and the world follows suit",
+      description: "10th place for innovation in Ludum Dare 47! Loop the music and the world follows suit.",
       images: [rebeatThumb],
       links: [
         {
@@ -42,8 +49,8 @@
     },
     {
       name: "Dynamo",
-      description: "Node-based image editing software written in C#",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      description: "Node-based image editing software written in C#.",
+      images: [dynamoThumb],
       links: [
         {
           name: "github",
@@ -53,8 +60,8 @@
     },
     {
       name: "Robowrangler",
-      description: "<robowrangler description>",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      description: "Help the robot to reach the exit! You must build the world around it, and then simulate its escape!",
+      images: [robowranglerThumb],
       links: [
         {
           name: "itch.io",
@@ -68,8 +75,8 @@
     },
     {
       name: "Micromarkets",
-      description: "<micromarkets description>",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      description: "Manage trade routes between markets, and deliver as many goods as possible!",
+      images: [micromarketsThumb],
       links: [
         {
           name: "itch.io",
@@ -77,14 +84,14 @@
         },
         {
           name: "github",
-          src: "https://github.com/AlexDavies8/GMTK2019"
+          src: "https://github.com/AlexDavies8/microMarkets"
         }
       ]
     },
     {
       name: "Pug Panic",
-      description: "<pug-panic description>",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      description: "OH NO! Your pet pug has gotten loose on your spaceship! You're locked in the bridge, though, so you'll have to try and protect it through your archaic, virus-ridden systems monitor. How long can you keep him safe?",
+      images: [pugPanicThumb],
       links: [
         {
           name: "itch.io",
@@ -92,52 +99,40 @@
         },
         {
           name: "github",
-          src: "https://github.com/AlexDavies8/LudumDare46"
+          src: "https://github.com/AlexDavies8/Ludum-Dare-46"
         }
       ]
     },
     {
-      name: "Intertwined",
-      description: "<intertwined description>",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      name: "InterTwined",
+      description: "A cat's entire world in a single screen - unravel the threads of other dimensions to find your way home!",
+      images: [intertwinedThumb],
       links: [
         {
           name: "itch.io",
           src: "https://alex-davies.itch.io/intertwined"
-        },
-        {
-          name: "github",
-          src: "https://github.com/AlexDavies8/GMTK2019"
         }
       ]
     },
     {
       name: "Failing Human",
-      description: "<failing-human description>",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      description: "How long can you keep your body alive in this fast-paced, arcade-style clicker game?",
+      images: [failingHumanThumb],
       links: [
         {
           name: "itch.io",
           src: "https://alex-davies.itch.io/failing-human"
-        },
-        {
-          name: "github",
-          src: "https://github.com/AlexDavies8/LD43"
         }
       ]
     },
     {
       name: "More Sacrifices",
-      description: "<more-sacrifices description>",
-      images: ["https://agtechgarage.com/wp-content/uploads/woocommerce-placeholder-800x800.png"],
+      description: "You've angered Cthulhu! You must sacrifice yourself on the altar to appease him, as you dodge poison darts, and leap over pits of spikes.",
+      images: [moreSacrificesThumb],
       links: [
         {
           name: "itch.io",
           src: "https://alex-davies.itch.io/more-sacrifices"
-        },
-        {
-          name: "github",
-          src: "https://github.com/AlexDavies8/LD42"
         }
       ]
     }
@@ -153,10 +148,22 @@
       src: "https://alex-davies.itch.io"
     },
     {
+      name: "ludum dare",
+      src: "https://ldjam.com/users/alex-davies/games"
+    },
+    {
       name: "linkedin",
       src: "https://www.linkedin.com/in/alex-davies-6774311ba/"
     }
   ]
+
+  const scrollToProjects = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
 </script>
 
 <main>
@@ -167,6 +174,7 @@
         <h1 class="hero-text">HELLO</h1>
         <h2 class="hero-text">I'M ALEX DAVIES, STUDENT AND HOBBYIST GAME DEVELOPER</h2>
       </div>
+      <img class="scroll-arrow" src={chevronDown} on:click={scrollToProjects} />
     </div>
     <div class="items-container">
       { #each projects as { name, description, images, links } }
@@ -209,6 +217,12 @@
     aspect-ratio: 1.333;
     position: relative;
     overflow: hidden;
+    opacity: 0.7;
+
+    transition: all 0.3s;
+  }
+  .portfolio-item:hover {
+    opacity: 1;
   }
   .portfolio-item-content-wrapper {
     position: absolute;
@@ -217,6 +231,21 @@
     background: rgba(30, 23, 72, 0.8);
     box-shadow: 0 0 50px 50px rgba(30, 23, 72, 0.8);
   }
+  .scroll-arrow {
+    position: absolute;
+    bottom: 5%;
+    aspect-ratio: 1;
+    width: 4em;
+    animation: vertical-bob 1s ease-in-out 0s infinite alternate;
+  }
+  @keyframes vertical-bob {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
   .portfolio-item-content {
     display: flex;
     position: relative;
@@ -293,6 +322,16 @@
     .portfolio-item {
       width: 100%;
     }
+    h1.hero-text {
+    font-size: 6em;
+    line-height: 1em;
+    margin: 0px;
+  }
+  h2.hero-text {
+    font-size: 1em;
+    margin: 0px;
+    line-height: 1.25em;
+  }
   }
   @media only screen and (min-width: 800px) and (max-width: 1200px) {
     .portfolio-item {
